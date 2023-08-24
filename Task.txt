@@ -1,0 +1,17 @@
+1) Log in form if success redirect to Dashboard page
+2) Add student detail -> student registration page
+3) Fatch detail by Student ID -> fatch student page
+4) Show All detail in Dashboard
+
+php pages
+login.php
+dashboard.php
+student.php
+add_student.php
+
+Database 
+user
+student
+log
+
+

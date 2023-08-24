@@ -1,0 +1,63 @@
+#content{
+    background-color: #e9ecef;
+}
+
+.student_detail .dashboard-summery-one{
+    background-color: #ffffff;
+    padding: 22px 28px;
+    border-radius: 4px;
+    box-shadow: 0px 10px 20px 0px rgba(229, 229, 229, 0.75);
+}
+
+.student_detail .dashboard-summery-one .item-icon{
+    position: relative;
+    height: 85px;
+    width: 85px;
+    line-height: 85px;
+    border-radius: 50%;
+    text-align: center;
+    background-color: #d1f3e0;
+}
+.student_detail .dashboard-summery-one .item-title{
+    color: #a8a8a8;
+    margin-bottom: 2px;
+}
+
+.student_detail .dashboard-summery-one .item-number{
+    font-size: 20px;
+    font-weight: 500;
+    color: #111111;
+}
+
+.student_detail .dashboard-summery-one.student_chart .student_doughnut_chart{
+    height: 200px;
+}
+
+/* .student_detail .dashboard-summery-one.student_chart .student_chart_content{
+    
+} */
+
+.select_range .row .select_range_box{
+    background-color: #ffffff;
+    border-radius: 4px;
+    box-shadow: 0px 10px 20px 0px rgba(229, 229, 229, 0.75);
+    margin: 0 10px;
+}
+
+.styled_box{
+    background-color: #ffffff;
+    border-radius: 4px;
+    box-shadow: 0px 10px 20px 0px rgba(229, 229, 229, 0.75);
+}
+
+/* #text{
+    background-image: url("http://3.bp.blogspot.com/-4oAWWCcNNz4/Tjr3nKNyVUI/AAAAAAAAPLU/Pouua-pNsEY/s1600/sq.gif");    
+    width: 195px;
+    height: 18px;
+    background-size: 20px;
+    border: none;
+    font-family: monospace;
+    font-size: 13px;
+    padding-left: 5px;
+    letter-spacing: 12px;
+} */
