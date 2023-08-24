@@ -9,7 +9,8 @@ $encryption_key = "child_help_foundation";
 class db{ 
     private $manager;
     protected function connect(){
-        return $this->manager = new MongoDB\Driver\Manager("mongodb://localhost:27017");
+        return $this->manager = new MongoDB\Driver\Manager("mongodb+srv://child_help_foundation:child_help_foundation@cluster0.k2nkgjw.mongodb.net/?retryWrites=true&w=majority");
+        // return $this->manager = new MongoDB\Driver\Manager("mongodb://localhost:27017");
     }    
 }
 

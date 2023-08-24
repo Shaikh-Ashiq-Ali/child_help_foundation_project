@@ -10,7 +10,7 @@ $role = $location = $dob = $gender = $section = $student_father_name = $student_
 
 if($_SERVER['REQUEST_METHOD'] == "POST"){
 
-    var_dump($_POST);
+    // var_dump($_POST);
     // var_dump($_FILES);
 
     $role = $_POST['role'];
@@ -30,7 +30,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
     $mctsNo = $_POST['mctsNo'];
     $ad_number = str_replace('-', '',$_POST['ad_number']);
     
-    echo $stu_uniID;
+    // echo $stu_uniID;
     // echo $stu_uniID_leangth;
 
     if($stu_uniID === ""){

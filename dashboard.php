@@ -8,13 +8,20 @@ require_once('includes/db.php');
 
 $data = json_decode($database->getData('student','all'),true);
 
-foreach($data as $key => $value){
-    foreach($value as $inkey => $invalue){
-        $$inkey[] = $invalue;
+// var_dump($data);
+
+if(!isset($data['status'])){
+    if(isset($data)){
+        $document_count = $data;
+        foreach($data as $key => $value){
+            foreach($value as $inkey => $invalue){
+                $$inkey[] = $invalue;
+            }
+        }
+
+        $gender_count = isset($gender) ? array_count_values($gender) : '';
     }
 }
-
-$gender_count = isset($gender) ? array_count_values($gender) : '';
 
 ?>
 
@@ -58,14 +65,14 @@ $gender_count = isset($gender) ? array_count_values($gender) : '';
                             <div>
                                 <div class="item-title">Female</div>
                                 <div class="item-number"><span class="counter"
-                                        data-num="<?= isset($gender_count) ? $gender_count['male'] : 0;  ?>"><?= isset($gender_count) ? $gender_count['male'] : 0;  ?></span>
+                                        data-num="<?= isset($gender_count) && isset($gender_count['male']) ? $gender_count['male'] : 0;  ?>"><?= isset($gender_count) && isset($gender_count['male'])  ? $gender_count['male'] : 0;  ?></span>
                                 </div>
                             </div>
                             <div>
                                 <div class="item-title">Male</div>
                                 <div class="item-number"><span class="counter"
-                                        data-num="<?= isset($gender_count) ? $gender_count['female'] : 0;  ?>">
-                                        <?= isset($gender_count) ? $gender_count['female'] : 0;  ?>
+                                        data-num="<?= isset($gender_count) && isset($gender_count['female']) ? $gender_count['female'] : 0;  ?>">
+                                        <?= isset($gender_count) && isset($gender_count['female']) ? $gender_count['female'] : 0;  ?>
                                     </span></div>
                             </div>
                         </div>
@@ -86,7 +93,7 @@ $gender_count = isset($gender) ? array_count_values($gender) : '';
                                         <div class="item-content">
                                             <div class="item-title">Students</div>
                                             <div class="item-number"><span class="counter"
-                                                    data-num="<?= isset($data) ? count($data) : 0 ?>"><?= isset($data) ? count($data) : 0 ?></span>
+                                                    data-num="<?= isset($document_count) ? count($document_count) : 0 ?>"><?= isset($document_count) ? count($document_count) : 0 ?></span>
                                             </div>
                                         </div>
                                     </div>
@@ -242,8 +249,8 @@ $gender_count = isset($gender) ? array_count_values($gender) : '';
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
     <script>
     const xValues = ["Female", "Male", ];
-    const yValues = [<?= isset($gender_count) ? $gender_count['female'] : 0;  ?>,
-        <?= isset($gender_count) ? $gender_count['male'] : 0;  ?>
+    const yValues = [<?= isset($gender_count) && isset($gender_count['female']) ? $gender_count['female'] : 0;  ?>,
+        <?= isset($gender_count) && isset($gender_count['male']) ? $gender_count['male'] : 0;  ?>
     ];
     const barColors = ["blue", "green"];
 
